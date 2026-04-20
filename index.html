@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slot Game</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Slot Game</h1>
+        <nav>
+            <button id="signInBtn">Sign In</button>
+            <button id="settingsBtn">Settings</button>
+            <button id="aboutBtn">About</button>
+            <button id="purchaseBtn">Purchase</button>
+        </nav>
+    </header>
+    <main>
+        <div id="statsPanel">
+            <p>Coins: <span id="coins">1000</span></p>
+            <p>Diamonds: <span id="diamonds">100</span></p>
+            <p>Energy: <span id="energy">100</span></p>
+            <p>Tickets: <span id="tickets">10</span></p>
+            <p>Rank: <span id="rank">Beginner</span></p>
+        </div>
+        <div id="slotContainer">
+            <div class="slotMachine" id="slot1"></div>
+            <div class="slotMachine" id="slot2"></div>
+            <div class="slotMachine" id="slot3"></div>
+        </div>
+        <div id="controlSection">
+            <button id="spinBtn">Spin</button>
+            <label for="betAmount">Bet:</label>
+            <input type="number" id="betAmount" value="10" min="1">
+        </div>
+        <div id="leaderboard">
+            <h2>Leaderboard</h2>
+            <!-- Leaderboard content here -->
+        </div>
+    </main>
+    <div id="signInModal">
+        <h3>Sign In</h3>
+        <!-- Sign In form here -->
+    </div>
+    <div id="settingsModal">
+        <h3>Settings</h3>
+        <!-- Settings options here -->
+    </div>
+    <div id="aboutModal">
+        <h3>About</h3>
+        <p>This is a slot game application.</p>
+    </div>
+    <div id="purchaseModal">
+        <h3>Purchase Options</h3>
+        <!-- Purchase options here -->
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
